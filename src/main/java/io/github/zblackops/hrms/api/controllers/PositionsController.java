@@ -3,12 +3,11 @@ package io.github.zblackops.hrms.api.controllers;
 import io.github.zblackops.hrms.business.abstracts.PositionService;
 import io.github.zblackops.hrms.core.utilities.results.DataResult;
 import io.github.zblackops.hrms.core.utilities.results.Result;
-import io.github.zblackops.hrms.entities.concretes.Position;
+import io.github.zblackops.hrms.entities.concretes.JobPosition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/positions")
@@ -22,12 +21,12 @@ public class PositionsController {
     }
 
     @GetMapping("/getall")
-    public DataResult<List<Position>> getAll(){
+    public DataResult<List<JobPosition>> getAll(){
         return positionService.getAll();
     }
 
     @PostMapping
-    public Result add(@RequestBody Position position){
-        return positionService.add(position);
+    public Result add(@RequestBody JobPosition jobPosition){
+        return positionService.add(jobPosition);
     }
 }
