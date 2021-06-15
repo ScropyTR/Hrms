@@ -5,12 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,15 +18,22 @@ import java.util.Date;
 @PrimaryKeyJoinColumn(name="user_id")
 public class JobSeeker extends User {
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = true)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = true)
     private String lastName;
 
-    @Column(name = "nationality_id")
+    @Column(name = "nationality_id", nullable = true)
     private String nationalityId;
 
-    @Column(name = "date_of_birth")
+    @Column(name = "date_of_birth", nullable = true)
     private LocalDate dateOfBirth;
+
+    @OneToOne(mappedBy = "jobSeeker")
+    private CurriculumVitae curriculumVitae;
+
+    @OneToOne(mappedBy = "jobSeeker")
+    private Image image;
+
 }

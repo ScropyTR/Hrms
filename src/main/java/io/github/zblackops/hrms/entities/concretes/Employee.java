@@ -18,10 +18,10 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name="user_id")
 public class Employee extends User {
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = true)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = true)
     private String lastName;
 
 }

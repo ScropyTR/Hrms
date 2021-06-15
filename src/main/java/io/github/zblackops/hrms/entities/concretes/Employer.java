@@ -18,10 +18,10 @@ import java.util.List;
 @Entity
 public class Employer extends User {
 
-    @Column(name = "company_name")
+    @Column(name = "company_name", nullable = true)
     private String companyName;
 
-    @Column(name = "web_site")
+    @Column(name = "web_site", nullable = true)
     private String webSite;
 
     @OneToMany(mappedBy = "employer")

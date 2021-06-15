@@ -4,6 +4,7 @@ import io.github.zblackops.hrms.business.abstracts.PositionService;
 import io.github.zblackops.hrms.business.constants.Messages;
 import io.github.zblackops.hrms.core.utilities.results.*;
 import io.github.zblackops.hrms.dataAccess.abstracts.PositionDao;
+import io.github.zblackops.hrms.entities.concretes.JobAdvertisement;
 import io.github.zblackops.hrms.entities.concretes.JobPosition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

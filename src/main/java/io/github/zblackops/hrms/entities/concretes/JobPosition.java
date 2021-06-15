@@ -1,5 +1,6 @@
 package io.github.zblackops.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,17 +14,17 @@ import java.util.List;
 @NoArgsConstructor
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "jobAdvertisements"})
 @Entity
-@Table(name="job_positions")
+@Table(name = "job_positions")
 public class JobPosition {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    private int id;
+    @Column(name = "id")
+    private int jobPositionId;
 
-    @Column(name="name")
+    @Column(name = "name", nullable = true)
     private String name;
 
     @OneToMany(mappedBy = "jobPosition")
-    private List<JobAdvertisement> jobAdvertisements;
+    List<JobAdvertisement> jobAdvertisements;
 }

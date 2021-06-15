@@ -1,5 +1,7 @@
 package io.github.zblackops.hrms.core.utilities.results;
 
+import javax.xml.crypto.Data;
+
 public class DataResult<T> extends Result {
 
     T data;

@@ -20,13 +20,13 @@ public class JobAdvertisement {
     @Column(name = "id")
     private int jobAdvertisementId;
 
-    @Column(name = "job_description")
+    @Column(name = "job_description", nullable = true)
     private String jobDescription;
 
-    @Column(name = "is_active")
+    @Column(name = "is_active", nullable = true)
     private boolean isActive;
 
-    @Column(name = "number_of_open_positions")
+    @Column(name = "number_of_open_positions", nullable = true)
     private int numberOfOpenPositions;
 
     @Column(name = "min_salary")
@@ -38,19 +38,19 @@ public class JobAdvertisement {
     @Column(name = "application_deadline")
     private LocalDate applicationDeadLine;
 
-    @Column(name = "release_date")
+    @Column(name = "release_date", nullable = true)
     private LocalDate releaseDate;
 
     @ManyToOne()
-    @JoinColumn(name = "employer_id")
+    @JoinColumn(name = "employer_id", nullable = true)
     private Employer employer;
 
     @ManyToOne()
-    @JoinColumn(name = "job_position_id")
+    @JoinColumn(name = "job_position_id", nullable = true)
     private JobPosition jobPosition;
 
     @ManyToOne()
-    @JoinColumn(name = "city_id")
+    @JoinColumn(name = "city_id", nullable = true)
     private City city;
 
 }

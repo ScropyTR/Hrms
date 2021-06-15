@@ -1,7 +1,7 @@
 package io.github.zblackops.hrms.business.concretes;
 
 import io.github.zblackops.hrms.business.abstracts.JobSeekerService;
-import io.github.zblackops.hrms.business.abstracts.VerificationService;
+import io.github.zblackops.hrms.core.adapters.abstracts.VerificationService;
 import io.github.zblackops.hrms.business.constants.Messages;
 import io.github.zblackops.hrms.core.utilities.email.abstracts.EmailService;
 import io.github.zblackops.hrms.core.utilities.results.*;
@@ -10,7 +10,6 @@ import io.github.zblackops.hrms.entities.concretes.JobSeeker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service

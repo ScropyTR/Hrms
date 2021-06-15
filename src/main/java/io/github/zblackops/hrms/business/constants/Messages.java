@@ -6,6 +6,7 @@ public class Messages {
     public static String successfullyAddedEmployer = "İş veren başarıyla eklendi";
     public static String successfullyAddedJobPosition = "İş pozisyonu başarıyla eklendi";
     public static String successfullyAddedJobAdvertisement = "İş ilanı başarıyla eklendi";
+    public static String successfullyAddedImage = "Fotoğraf başarıyla eklendi";
     public static String allFieldsAreRequired = "Tüm alanlar zorunludur";
     public static String verificationIsInvalid = "Doğrulama geçersiz";
     public static String eMailAlreadyExists = "Bu e-posta adresinde zaten bir kullanıcı mevcut";
